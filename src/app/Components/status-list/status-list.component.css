@@ -1,0 +1,39 @@
+.status-list {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .status-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .status-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .status-list li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .status-list li:last-child {
+    border-bottom: none;
+  }
+  
+  .initial-status {
+    color: green;
+    font-weight: bold;
+  }
+
+  .final-status {
+    color: rgb(35, 13, 232);
+    font-weight: bold;
+  }
+
+  .orphan-status {
+    color: rgb(198, 12, 12);
+    font-weight: bold;
+  }
+  

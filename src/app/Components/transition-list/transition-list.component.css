@@ -1,0 +1,25 @@
+.transition-list {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .transition-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .transition-list ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .transition-list li {
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .transition-list li:last-child {
+    border-bottom: none;
+  }
+  
+  

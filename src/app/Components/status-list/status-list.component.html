@@ -1,0 +1,19 @@
+<h3>Add status</h3>
+<input type="text" id="input-state" value="" [(ngModel)]="status" placeholder="Enter status">
+<button (click)="addStatus()">Add</button>
+<div class="status-list">
+    <h2>Statuses</h2>
+    <ul>
+      <li *ngFor="let status of statuses">
+        <input type="radio" name="initialStatus" 
+           [checked]="status.isInitial"
+           (change)="setInitialStatus(status)">
+             <span>{{ status.name }}</span>
+        <button (click)="deleteStatus(status)">remove</button>
+        <span *ngIf="status.isInitial" class="initial-status">(Initial)</span>
+        <span *ngIf="status.isOrphan"  class="orphan-status">(Orphan)</span>
+        <span *ngIf="status.isFinal" class="final-status">(Final)</span>
+      </li>
+    </ul>
+  </div>
+  

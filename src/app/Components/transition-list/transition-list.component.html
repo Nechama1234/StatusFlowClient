@@ -1,0 +1,28 @@
+<h3>Add transition</h3>
+<input type="text" id="input-transition" value="" [(ngModel)]="transition" placeholder="Enter transition">
+<label>From:
+        <select [(ngModel)]="SelectedStatusFrom">
+            <option selected=""></option>
+            <option *ngFor="let status of statusesFrom" [ngValue]="status.statusId">{{ status.name }}</option>
+          </select>    
+<label>To:
+    <select [(ngModel)]="SelectedStatusTo">
+        <option selected=""></option>
+        <option *ngFor="let status of statusesTo" [ngValue]="status.statusId">{{ status.name }}</option>
+      </select>
+<button (click)="addTransition()">Add</button>
+<div class="transition-list">
+    <h2>Transitions</h2>
+    <ul>
+      <li *ngFor="let transition of transitions">
+             <span>{{ transition.name }}</span>
+             <span> : </span>
+             <span>{{ getStatusName(transition.fromStatusId) }}</span>
+             <span> -> </span>
+             <span>{{ getStatusName(transition.toStatusId) }}</span>
+        <button (click)="deleteTransition(transition)">remove</button>
+      </li>
+    </ul>
+  </div>
+  
+

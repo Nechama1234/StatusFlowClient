@@ -1,0 +1,4 @@
+.container {
+    display: flex;
+    gap: 16px; /* רווח בין הקומפוננטות, לא חובה */
+  }
